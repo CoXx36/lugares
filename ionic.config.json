@@ -1,0 +1,7 @@
+{
+  "name": "lugares",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
