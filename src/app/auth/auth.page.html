@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/lugares" text="Volver"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Usuario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="light">
+  <ion-list [inset]="true">
+    <ion-item>
+      <ion-label>
+        <h1>{{user?.username}}</h1>
+        <p>Usuario</p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <h1>{{user?.nombres}}</h1>
+        <p>Nombres</p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <h1>{{user?.apellidos}}</h1>
+        <p>Apellidos</p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <h1>{{user?.email}}</h1>
+        <p>Email</p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <h1>{{user?.rol}}</h1>
+        <p>Rol</p>
+      </ion-label>
+    </ion-item>
+
+    <ion-button
+      shape="round"
+      expand="block"
+      id="open-modal"
+      routerLink="login"
+      [disabled]="!user ? false: true "
+      >Iniciar Sesion</ion-button
+    >
+    <ion-button 
+      shape="round" 
+      expand="full" 
+      color="danger"
+      (click)="logout()"
+      >Cerrar Sesion</ion-button
+    >
+    <!-- <ion-button shape="round" expand="full" color="danger" [routerLink]="['register']">Register</ion-button> -->
+  </ion-list>
+</ion-content>

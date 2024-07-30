@@ -1,0 +1,34 @@
+<ion-header >
+  <ion-toolbar>
+    <ion-title>register</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Email</ion-label>
+    <ion-input [(ngModel)]="email" type="email"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Password</ion-label>
+    <ion-input [(ngModel)]="password" type="password"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Username</ion-label>
+    <ion-input [(ngModel)]="username" type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Nombres</ion-label>
+    <ion-input [(ngModel)]="nombres" type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Apellidos</ion-label>
+    <ion-input [(ngModel)]="apellidos" type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Rol</ion-label>
+    <ion-input [(ngModel)]="rol" type="text"></ion-input>
+  </ion-item>
+  <ion-button expand="full" (click)="register()">Register</ion-button>
+</ion-content>
+

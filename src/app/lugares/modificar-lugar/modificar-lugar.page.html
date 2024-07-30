@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/lugares" text="Volver"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="primary">
+      <ion-button [routerLink]="['/lugares']">
+        <ion-icon name="home-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Modificar Lugar</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-row>
+    <ion-col>
+      <ion-card>
+        <ion-card-content>
+          <ion-input placeholder="Ingrese el titulo del lugar" type="text" [(ngModel)]="tit"></ion-input>
+          <ion-input placeholder="Ingrese url de imagen" [(ngModel)]="img"></ion-input>
+          <ion-input placeholder="Ingrese el comentario" [(ngModel)]="com"></ion-input>
+          <ion-button color="primary" (click)="ModificarLugar()">
+            Guardar
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-content>

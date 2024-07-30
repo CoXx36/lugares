@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/lugares" text="Volver"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Accordion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-accordion-group>
+    <ion-accordion *ngFor="let item of ListaSitios">
+      <ion-item slot="header" color="light">
+        <ion-label>{{ item.Titulo }}</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <ion-img [src]= "item.ImagenURL"></ion-img>
+      </div>
+    </ion-accordion>
+  </ion-accordion-group>
+</ion-content>
